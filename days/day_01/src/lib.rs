@@ -13,14 +13,17 @@ fn read_depths_from_file(path: &str) -> Result<Vec<i32>, Box<dyn Error>> {
 }
 
 pub fn run() {
+    println!("Task 01\n");
+    println!("Part 1\n");
     part_1();
 
+    println!("Part 2\n");
     part_2();
 }
 
 
 fn part_1() {
-    let depths = read_depths_from_file("./task_01/data/depths.csv")
+    let depths = read_depths_from_file("./day_01/data/depths.csv")
         .unwrap();
 
     let mut incremented: i32 = 0;
@@ -37,7 +40,7 @@ fn part_1() {
 }
 
 fn part_2() {
-    let depths = read_depths_from_file("./task_01/data/depths.csv")
+    let depths = read_depths_from_file("./day_01/data/depths.csv")
         .unwrap();
 
     let mut start_index: usize = 0;

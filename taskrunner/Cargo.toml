@@ -7,5 +7,7 @@ edition = "2021"
 
 [dependencies]
 
-task_01 = { path = "../tasks/task_01" }
-task_02 = { path = "../tasks/task_02" }
+day_01 = { path = "../days/day_01" }
+day_02 = { path = "../days/day_02" }
+day_03 = { path = "../days/day_03" }
+day_04 = { path = "../days/day_04" }
