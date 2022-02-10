@@ -25,11 +25,11 @@ fn read_maneuvers_from_file(path: &str) -> Result<Vec<Maneuver>, Box<dyn Error>>
 }
 
 pub fn run() {
-    println!("Task 02\n");
-    println!("Part 1\n");
+    println!("## Day 02 ##");
+    println!("\nPart 1");
     part_1();
 
-    println!("Part 2\n");
+    println!("\nPart 2");
     part_2();
 }
 

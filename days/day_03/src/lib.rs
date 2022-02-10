@@ -13,7 +13,7 @@ fn read_diagnostic_numbers_from_file(path: &str) -> Result<Vec<String>, Box<dyn 
 }
 
 pub fn run() {
-    println!("## Task 03 ##");
+    println!("## Day 03 ##");
     println!("\nPart 1");
     part_1();
 

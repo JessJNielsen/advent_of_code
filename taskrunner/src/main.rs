@@ -1,6 +1,6 @@
-extern crate day_04;
+extern crate day_05;
 
 fn main() {
     // TODO: Use CLI to choose which module to run
-    day_04::run();
+    day_05::run();
 }
