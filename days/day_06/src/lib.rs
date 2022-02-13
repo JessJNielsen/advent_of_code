@@ -11,9 +11,8 @@ pub fn run() {
     fish_simulator(
         "3,4,3,1,2",
         80
-    ); // Take sonly 591.916µs
-    let duration = start.elapsed();
-    println!("Part 1 completed in: {:?}", duration);
+    );
+    println!("Part 1 completed in: {:?}", start.elapsed());
 
     // Part 2
     println!("Running Part 2\n");
@@ -23,8 +22,7 @@ pub fn run() {
         "1,3,3,4,5,1,1,1,1,1,1,2,1,4,1,1,1,5,2,2,4,3,1,1,2,5,4,2,2,3,1,2,3,2,1,1,4,4,2,4,4,1,2,4,3,3,3,1,1,3,4,5,2,5,1,2,5,1,1,1,3,2,3,3,1,4,1,1,4,1,4,1,1,1,1,5,4,2,1,2,2,5,5,1,1,1,1,2,1,1,1,1,3,2,3,1,4,3,1,1,3,1,1,1,1,3,3,4,5,1,1,5,4,4,4,4,2,5,1,1,2,5,1,3,4,4,1,4,1,5,5,2,4,5,1,1,3,1,3,1,4,1,3,1,2,2,1,5,1,5,1,3,1,3,1,4,1,4,5,1,4,5,1,1,5,2,2,4,5,1,3,2,4,2,1,1,1,2,1,2,1,3,4,4,2,2,4,2,1,4,1,3,1,3,5,3,1,1,2,2,1,5,2,1,1,1,1,1,5,4,3,5,3,3,1,5,5,4,4,2,1,1,1,2,5,3,3,2,1,1,1,5,5,3,1,4,4,2,4,2,1,1,1,5,1,2,4,1,3,4,4,2,1,4,2,1,3,4,3,3,2,3,1,5,3,1,1,5,1,2,2,4,4,1,2,3,1,2,1,1,2,1,1,1,2,3,5,5,1,2,3,1,3,5,4,2,1,3,3,4",
         256
     );
-    let duration = start.elapsed();
-    println!("Part 2 completed in: {:?}", duration);
+    println!("Part 2 completed in: {:?}", start.elapsed());
 }
 
 fn fish_simulator(input: &str, days: i16) {
@@ -38,7 +36,7 @@ fn fish_simulator(input: &str, days: i16) {
         fish_buckets[bucket] = initial_fish.iter().filter(|fish| usize::try_from(**fish).unwrap() == bucket).count();
     }
 
-    for day in 1..=days {
+    for _ in 1..=days {
         // Get dead fish from 0 and clear bucket afterwards
         let dead_fish = fish_buckets[0];
         fish_buckets[0] = 0;
@@ -53,7 +51,8 @@ fn fish_simulator(input: &str, days: i16) {
         fish_buckets[6] += dead_fish;
         fish_buckets[8] = dead_fish;
 
-        println!("Fish after {} day(s): {}", day, fish_buckets.iter().sum::<usize>());
+        // This little print is gonna cost us around 200µs, so lets leave it commented
+        // println!("Fish after {} day(s): {}", day, fish_buckets.iter().sum::<usize>());
     }
 
     println!("Fish after {} days: {}", days,  fish_buckets.iter().sum::<usize>());
