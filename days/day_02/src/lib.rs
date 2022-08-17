@@ -1,5 +1,4 @@
 use std::error::Error;
-use csv;
 use csv::ReaderBuilder;
 use serde::Deserialize;
 
