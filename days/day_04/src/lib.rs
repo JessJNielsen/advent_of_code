@@ -179,7 +179,7 @@ fn read_and_construct_bingo_boards_from_file(path: &str) -> Result<Vec<BingoBoar
 }
 
 pub fn run() {
-    println!("## Day 04 ##");
+    println!("## Day 04: Bingov ##");
     println!("\nPart 1");
     part_1();
 

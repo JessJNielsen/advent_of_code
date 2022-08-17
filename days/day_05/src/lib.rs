@@ -2,7 +2,7 @@ use std::cmp;
 use std::error::Error;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
-use itertools::{Itertools, zip_eq};
+use itertools::{zip_eq};
 
 #[derive(Debug, Clone)]
 struct Segment {
